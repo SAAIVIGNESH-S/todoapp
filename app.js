@@ -10,7 +10,7 @@ app.use("/", router);
 
 mongoose
   .connect(
-    "mongodb+srv://SSV:osAwd8kzUHrjLIb1@test.imoijye.mongodb.net/todo?retryWrites=true&w=majority"
+    process.env.MONGODB_URL
   )
   .then((result) => {
     const PORT = process.env.PORT || 8000;
